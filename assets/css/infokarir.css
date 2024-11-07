@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+}
+
+.apply-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.line {
+  height: 2px; /* Tinggi garis */
+  background-color: #000; /* Warna garis */
+  width: 100%; /* Panjang garis mengikuti lebar container */
+  margin: 10px 0; /* Jarak atas dan bawah garis */
+}
+/* responsive.css */
+@media (max-width: 768px) {
+  /* Mengatur baris menjadi flex dan urutan elemen sesuai keinginan */
+  .container .row {
+    display: flex;
+    margin-top: -15%;
+    flex-direction: column;
+  }
+
+  /* Memastikan setiap kolom mengambil lebar penuh */
+  .container .row .col-lg-6 {
+    width: 100%;
+  }
+
+  /* Atur urutan elemen untuk memastikan h1, p, gambar tampil di urutan yang benar */
+  .about-images {
+    order: 1; /* H1 dan P muncul pertama */
+  }
+
+  .content {
+    order: 2; /* Gambar muncul kedua */
+    text-align: center;
+  }
+  .content h1,
+  .content p {
+    text-align: left; /* Menjaga h1 dan p rata kiri */
+  }
+  .container {
+    position: relative;
+  }
+  .apply-button {
+    position: static;
+    display: block;
+    margin-top: 20px;
+    transform: none;
+    width: 50%;
+  }
+}
